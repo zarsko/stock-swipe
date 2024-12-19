@@ -1,0 +1,132 @@
+.swipe-container {
+  width: 100%;
+  max-width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-weight: bold;
+}
+
+.timer-critical {
+  color: #ff4444 !important;
+}
+
+.swipe-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  transition: transform 0.3s ease;
+}
+
+.swipe-card:hover {
+  transform: scale(1.02);
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeframe-label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.swipe-button {
+  width: 70px !important;
+  height: 70px !important;
+  border: 1px solid #e8e8e8 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.2s ease !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px;
+}
+
+.swipe-button.short {
+  color: #ff4d4d !important;
+}
+
+.swipe-button.short:hover {
+  background-color: #ffe6e6 !important;
+  transform: scale(1.1) rotate(-10deg);
+}
+
+.swipe-button.long {
+  color: #4CAF50 !important;
+}
+
+.swipe-button.long:hover {
+  background-color: #e8f5e9 !important;
+  transform: scale(1.1) rotate(10deg);
+}
+
+.feedback-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
